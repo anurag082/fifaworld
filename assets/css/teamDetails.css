@@ -1,0 +1,78 @@
+.team-details {
+  margin-bottom: 60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-image: url("https://via.placeholder.com/1351x3000/?text=Fifa World Cup");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team-details h2 {
+  width: 60%;
+  margin: 0 auto 50px auto;
+  background: linear-gradient(to right, #305985 , #464b89);
+  color: #f1e9e996;
+}
+
+.playerDetails {
+  width: 60%;
+  margin: 0 auto;
+}
+
+th { 
+  text-transform: uppercase;
+  text-align: left;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3b5288;
+  color: white;
+}
+
+td:nth-child(even){ background: linear-gradient(to right, #4c478a 36%, #266783 100%); }
+td:nth-child(odd){ background: linear-gradient(to right, #4c478a 36%, #266783 100%); }
+td:hover {background-color: #ddd;}
+
+td,
+th {
+  color: #ffffffc2;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .playerDetails { width: 100%; }
+
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	.playerDetails tr:first-child { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1.5px solid #ccc; }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+  }
+
+	td:nth-of-type(1):before { content: "Name"; }
+	td:nth-of-type(3):before { content: "Shirt Number"; }
+	td:nth-of-type(4):before { content: "Position"; }
+}

@@ -1,0 +1,785 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Header / .header
+    2.1. Navigation / .navbar
+  3. Main / .main
+    3.1. Left column / .leftcolumn
+    3.2. Right column / .rightcolumn
+    3.3. Sidebar / .sidebar
+      3.3.1. RSS / .rss
+      3.3.2. Search / .search
+      3.3.3. Boxes / .box
+      3.3.4. Sideblog / .sideblog
+      3.3.5. Advertisements / .ads
+  4. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* Common Selectors */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul li{
+  list-style-type: none;
+  display: inline-block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.transition {
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body {font-family: sans-serif;}
+.uppercase {text-transform: uppercase;}
+.lowercase {text-transform: lowercase;}
+.capitalize {text-transform: capitalize;}
+.first-letter:first-letter { text-transform: uppercase; }
+
+
+
+/* ==========================================================================
+   2. Header
+   ========================================================================== */
+
+/* 2.1. Navigation
+   ========================================================================== */
+
+header { 
+  padding: 22px 0px;
+  background: linear-gradient(to right, #4c478a 36%, #266783 100%);
+}
+
+.hamburgericon { display: none; }
+h1 { width: 9.4%; }
+nav { width: 36%; }
+h1,nav { display: inline-block; }
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+[title=LogIn] {
+  padding: 10px 18px;
+  border-radius: 12px;
+  float: right;
+  background-color: #4c478a;
+}
+
+nav a,
+[title=LogIn] { 
+  text-transform: uppercase;
+  color: #ffffffcc;
+}
+
+nav a {
+  padding: 15px;
+  position:relative;
+  z-index: 1;
+}
+
+nav a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #0000009c;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+nav a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+/* ==========================================================================
+   3. Main
+   ========================================================================== */
+
+/* 3.1. Slider
+========================================================================== */
+
+
+.sliderContainer .wrapper { 
+  width: 100%;
+  overflow: hidden;
+  position: relative; 
+}
+
+.slider { 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.slides { 
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; 
+  -ms-flex-negative: 0; 
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slides h2 {
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  width: 100%;
+  color: #2a6084;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.dot  
+{  
+  width: 20px;  
+  height: 20px;
+  border: 5px solid #ddd;
+  border-radius: 50%; 
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: border-color 2s ease;
+  transition: border-color 2s ease; 
+  text-indent: -9999px;
+} 
+
+.dot-active {
+  border-color: #2b6085;
+}
+
+.bullets {
+  position: absolute;
+  left: 49%;
+  bottom: 10%;
+}
+
+.arrow-left,
+.arrow-right { text-indent: -9999px; }
+
+.arrow-left::before,
+.arrow-right::after {
+  position: absolute;
+  top: 40%;
+  font-size: 35px;
+  font-family: "fontAwesome";
+  text-indent: 0;
+  color: #4185b9
+}
+
+.arrow-left::before {
+  content: "\f053"; 
+  left: 1%;  
+}
+
+.arrow-right::after {
+  content: "\f054";
+  right: 1%;
+}
+
+.slideLeft { left: -100%; }
+.slides img { max-height: 456px; }
+
+
+/* 3.2. Video 
+=============================================================*/
+
+
+.video-container .wrapper,video { width: 100%; }
+.video-container .wrapper { margin-bottom: 150px;   }
+   
+/* 3.3. Top Teams
+========================================================================== */
+
+.topPlayers { 
+  margin-bottom: 130px;
+  padding-bottom: 70px;
+  background-color: #fbf9f9;
+ }
+
+.topPlayers .wrapper,
+.topteams .wrapper {
+  padding-left: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+
+ h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 70px;
+  color: #000000bd;
+}
+
+.top { 
+  width: 24.6%;
+  border-radius: 25px;
+  border: 2px solid #d0cfd469;
+}
+
+.top img { border-radius: 22px 22px 0px 0px; }
+.top a:hover,
+.recent a:hover { color: #266783; }
+
+.top a {
+  color: #27272bfa;
+  font-size: 17px;
+  -webkit-transition: color 1.5s;
+  transition: color 1.5s;
+}
+
+.top h3 {
+  margin-bottom: 20px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.top p {
+  color: #5f6e82a8;
+  text-align: center;
+}
+
+.player,
+.teams { padding: 23px 15px; }
+
+.topteams { 
+  padding-bottom: 100px;
+  background-color: #ffffffab;
+  border-bottom: 2px solid #0000002e;
+}
+/* 3.4. Recent News
+========================================================================== */
+
+.news { margin-bottom: 130px; }
+
+.recent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.recent a {
+  padding: 7px 11px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #000000f2;
+  -webkit-transition: color 1.5s;
+  transition: color 1.5s;
+}
+
+.recent figure {
+  position: relative;;
+}
+
+.recent article {
+  width: 25%;
+}
+
+.recent figcaption {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: #0000009e;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+/* 3.5. Login Form
+========================================================================== */
+
+.loginform {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: #00000059;
+}
+
+.login {
+  width: 39%;
+  margin: 0 auto;
+  padding: 75px 6%;
+  background: linear-gradient(to right, #4c478a 36%, #266783 100%);
+  border-radius: 13px;
+  -webkit-transform: translate(0, 130%);
+  transform: translate(0, 50%);
+  -webkit-animation: popup 1s ease-in-out;
+  animation: popup 1s ease-in-out;
+}
+
+@-webkit-keyframes popup {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes popup {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+.login input {
+  width: 100%;
+  height: 38px;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 6px;
+}
+
+.login [type=submit] { 
+  padding: 12px 10px;
+  color: #e7e7ea;
+  font-size: 18px;
+  background-color: #266783;
+}
+
+[title=close] {
+  padding: 5px 15px;
+  color: white;
+  position: absolute;
+  top: 16%;
+  right: 26%;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #286384;
+}
+
+::-webkit-input-placeholder {
+  font-size: 15px;
+  font-style: italic;
+  color: #0000008a;
+}
+
+:-ms-input-placeholder {
+  font-size: 15px;
+  font-style: italic;
+  color: #0000008a;
+}
+
+::-ms-input-placeholder {
+  font-size: 15px;
+  font-style: italic;
+  color: #0000008a;
+}
+
+::placeholder {
+  font-size: 15px;
+  font-style: italic;
+  color: #0000008a;
+}
+
+.warning { text-indent: -9999px; }
+
+.warn { 
+  color: r#ff0000db;
+  text-indent: 0;
+}
+
+.show { display: block; }
+.none { display: none; }
+
+/* ==========================================================================
+   4. Footer
+   ========================================================================== */
+
+footer{
+  padding: 10px 0;
+  position: relative;
+  background: linear-gradient(to right, #4c478a 36%, #266783 100%);
+}
+
+.topToScroll {
+  width: 4%;
+  padding: 11px 13px;
+  position: absolute;
+  left: 50%;
+  bottom: 36%;
+  color: #f8ffff;
+  font-size: 29px;
+  font-family: "fontAwesome";
+  border: 1px solid #809fbc;
+  border-radius: 0;
+  background-color: #35648e;
+  text-indent: -9999px;
+}
+ 
+.topToScroll::before{ 
+  content: "\f077";
+  position: absolute;
+  left: 23%;
+  text-indent: 0;
+}
+
+.privacy { 
+  display: inline-block;
+  width: 30%;
+}
+
+html { scroll-behavior: smooth; }
+
+footer a,
+footer span { 
+  font-size: 17px;
+  color: #dcdbe8;
+}
+
+.social { 
+  width: 20%;
+  float: right; 
+}
+
+.privacy li {
+  margin-left: 5%;
+}
+
+.social a {
+  text-indent: -9999px;
+  position: relative;
+}
+
+.social li { margin-left: 15%; }
+
+.social a::before {
+   position: absolute;
+   left: 50%;
+   font-family: "fontAwesome";
+   text-indent: 0;
+}
+
+.facebook::before { content: '\f082'; }
+.twitter::before { content: '\f099'; }
+.google-plus::before { content: '\f0d5'; }
+.linkedin::before { content: '\f0e1'; }
+.tumblr::before { content: '\f173'; }
+.instagram::before { content: '\f16d'; }
+.youtube::before { content: '\f167'; }
+.rss::before { content: '\f09e'; }
+
+
+
+@media only screen and (max-width: 995px) {
+
+ 
+  .hide { display: none; }
+
+  h1 {
+    width: 100%;
+    max-width: 114px;
+  }
+
+  [title=LogIn] {
+    display: inline-block;
+    float: unset;
+    background-color: #3e3a7be3;
+  }
+  
+  .hamburgericon,
+  .hamburger {
+    margin: 1em;
+    width: 5%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .hamburgericon:after, 
+  .hamburgericon:before, 
+  .hamburgericon span {
+    background-color: #fff;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 7px 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+
+  .hamburgericon span { text-indent: -9999px; }
+
+  .hamburger:before 
+  { 
+    -webkit-transform: translateY(12px) rotate(135deg); 
+    transform: translateY(12px) rotate(135deg); 
+  } 
+
+  .hamburger:after { 
+    -webkit-transform: translateY(-12px) rotate(-135deg);
+    transform: translateY(-12px) rotate(-135deg); 
+  } 
+  .hamburger span { 
+    -webkit-transform: scale(0); 
+    transform: scale(0);
+  }
+
+  nav {
+    z-index: 1;
+    width: 100%; 
+    position: absolute;
+    top: 9%; 
+    left: 0;
+    background: linear-gradient(to right, #4c478a 36%, #266783 100%);
+  }
+
+  nav a:hover:after {
+    opacity: 0; 
+    visibility: hidden; 
+  }
+  .top a:hover,
+.recent a:hover { color: unset; }
+  nav ul,
+  nav li { display: block; }
+  nav ul { text-align: center; }
+  nav li { padding: 16px 0px; }
+  [title=LogIn] { margin-top: -11px; }
+  .slides h2 { font-size: 35px; }
+  .bullets { bottom: 20%; }
+  .top { width: 30.6%; }
+  .topToScroll { width: 5.9%; }
+  footer a, footer span { font-size: 12px; }
+  footer span { padding-left: 7px; }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .slides h2,
+  .recent h2 { font-size: 28px; }
+  .topPlayers .wrapper, 
+  .topteams .wrapper,
+  .recent { 
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap; 
+  }
+
+  .top { 
+    width: 45%;
+    margin-bottom: 45px;
+   }
+
+   .privacy { 
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .social { float: unset; }
+  .topToScroll { 
+    width: 10%;
+    right: 5%;
+    left: unset;
+  }
+
+  
+  .recent article {
+    width: 48.5%;
+    margin-bottom: 40px;
+  }
+  
+  .login { width: 60%; }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .hamburgericon, 
+  .hamburger { width: 34px; }
+  .slides h2 { font-size: 20px; }
+  .sliderContainer { margin-bottom: 70px; }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .top,
+  .recent article { width: 100%; }
+  .topPlayers { margin-bottom: 57px; }
+  .topPlayers .wrapper,
+  .topteams .wrapper,
+  .recent { display: block; }
+  .top img { max-height: 200px; }
+  .topToScroll { width: 15%; }
+  h2 { font-size: 22px; }
+  .bullets { left: 38%; }
+  .login input { width: 100%; }
+  .login { width: 80%; }
+
+}

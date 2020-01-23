@@ -1,0 +1,35 @@
+
+/* ==========================================================================
+   2.1. Main
+   ========================================================================== */
+
+/*
+2.1. Table Section
+===========================================================================*/
+
+header,
+.tablecontainer { margin-bottom: 100px; }
+.wrapper { width: 91%; }
+.tablecontainer { overflow-x: auto; }
+
+.myData {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tablecontainer tr:nth-child(even){background-color: #f2f2f2;}
+.tablecontainer tr:hover {background-color: #ddd;}
+
+.tablecontainer td,
+.tablecontainer th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.participatingTeams th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3b5288;
+  color: white;
+}

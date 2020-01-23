@@ -1,0 +1,88 @@
+
+/* ==========================================================================
+   1. Header
+   ========================================================================== */
+header { margin-bottom: 100px; }
+
+/* ==========================================================================
+   2. Main
+   ========================================================================== */
+ 
+/* 2.1. Counter Section
+========================================================================== */
+
+.counter { 
+  background-color: #385387e8;
+  position: relative;
+  padding: 73px 0;
+  margin-bottom: 107px;
+ }
+
+ .counter ul { 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-pack: distribute;
+	justify-content: space-around;
+  }
+
+ .counter li {
+  display: block;
+	position: relative;
+	color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.counter span { 
+  font-size: 35px;
+  margin-top: 6px;
+  margin-bottom: 22px;
+  display: block; 
+}
+
+/* 2.2. Select option(Teams or Matches) Section
+========================================================================== */
+
+.select {
+  padding: 70px 31px;
+  margin-bottom: 74px;
+}
+
+.select h2,.select a { text-transform: uppercase; }
+
+.select h2 {
+  margin-bottom: 50px;
+  font-size: 25px;
+  color: #395387;
+}
+
+.select a {
+  width: 30%;
+  padding: 19px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  background-color: #296284;
+  color: #cfd8e2;
+} 
+
+
+
+@media only screen and (max-width: 480px) {
+
+  .select a {
+    width: 100%;
+    display: block;
+    margin-bottom: 21px;
+    text-align: center;
+  }
+
+  .counter li { margin-right: 10%; }
+  h1 { width: 19.4%;}
+  .hamburgericon,
+  .hamburger { 
+    left: unset;
+    right: 0;
+  }
+}

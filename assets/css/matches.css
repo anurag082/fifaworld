@@ -1,0 +1,81 @@
+
+/* ==========================================================================
+   1. Header
+   ========================================================================== */
+
+header { margin-bottom: 60px; }
+
+/* ==========================================================================
+   2. Main
+   ========================================================================== */
+ 
+/* 2.1. Match Section
+========================================================================== */
+.match h2 {
+  padding: 15px 12px;
+  margin: 0;
+  background: linear-gradient(to right, #4c478a 59%, #266783 100%);
+  cursor: pointer;
+  color: #ffffffb3;
+  font-size: 26px;
+  text-align: left;
+}
+
+.match ul { 
+  display: none;
+  padding: 12px 10px;
+  background-color: #faebd766;
+}
+
+.match section:first-child ul { display: block; }
+.match { margin-bottom: 100px; }
+.match section { border-bottom: 2px solid #ffecec45; }
+
+.match span { 
+  color: #5191cc;
+  font-size: 35px;  
+}
+.matchdetail li { 
+  padding: 10px 12px;
+  display: block;
+}
+
+.matchdetail a,
+.matchdetail li {
+  font-size: 17px;
+  color: #040303e0;
+}
+
+.awaystatistics { border-right: 2px solid #1d181830; }
+
+.matchdetail a { text-decoration: underline; }
+.matchdetail .home-statistics,
+.matchdetail .homestatistics,
+.matchdetail .awaystatistics { 
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  border-top: 2px solid #1d181830;
+  border-left: 2px solid #1d181830;
+  border-bottom: 2px solid #1d181830;
+}
+
+/* ==========================================================================
+   3. Media Queries
+   ========================================================================== */
+
+@media only screen and (max-width: 768px) {
+
+  .matchdetail a, .matchdetail li { font-size: 15px; }
+  .match h2,
+  .match span { font-size: 22px; }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .homestatistics { border-right: 2px solid #1d181830; }
+  .matchdetail .home-statistics,
+  .matchdetail .homestatistics,
+  .matchdetail .awaystatistics { margin-bottom: 30px; }
+  .match h2, .match span { font-size: 18px; }
+}
