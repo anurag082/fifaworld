@@ -9,7 +9,7 @@
 
 header,
 .tablecontainer { margin-bottom: 100px; }
-.wrapper { width: 91%; }
+.tablecontainer .wrapper { width: 91%; }
 .tablecontainer { overflow-x: auto; }
 
 .myData {
