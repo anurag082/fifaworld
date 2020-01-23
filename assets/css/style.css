@@ -277,6 +277,7 @@ nav ul li a:before {
 }
 
 .slides { 
+  z-index: 99;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,6 +330,7 @@ nav ul li a:before {
 
 .arrow-left::before,
 .arrow-right::after {
+  z-index: 999;
   position: absolute;
   font-size: 35px;
   font-family: "fontAwesome";
