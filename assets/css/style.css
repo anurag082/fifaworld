@@ -320,12 +320,16 @@ nav ul li a:before {
 }
 
 .arrow-left,
-.arrow-right { text-indent: -9999px; }
+.arrow-right { 
+  text-indent: -9999px;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+}
 
 .arrow-left::before,
 .arrow-right::after {
   position: absolute;
-  top: 40%;
   font-size: 35px;
   font-family: "fontAwesome";
   text-indent: 0;
@@ -334,12 +338,12 @@ nav ul li a:before {
 
 .arrow-left::before {
   content: "\f053"; 
-  left: 1%;  
+  left: 0;  
 }
 
 .arrow-right::after {
   content: "\f054";
-  right: 1%;
+  right: 0;
 }
 
 .slideLeft { left: -100%; }
