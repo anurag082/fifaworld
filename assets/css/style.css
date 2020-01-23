@@ -652,6 +652,7 @@ footer span {
   
   .hamburgericon,
   .hamburger {
+    z-index: 22;
     margin: 1em;
     width: 5%;
     display: block;
@@ -693,9 +694,9 @@ footer span {
 
   nav {
     z-index: 1;
-    width: 100%; 
+    width: 100%;
     position: absolute;
-    top: 9%; 
+    top: 12px;
     left: 0;
     background: linear-gradient(to right, #4c478a 36%, #266783 100%);
   }
